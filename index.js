@@ -7,7 +7,7 @@ import * as MirrorsStandartController from './controller/MirrorsStandartControll
 dotenv.config();
 const app = express();
 
-const db = 'mongodb+srv://rostiko_455:qwerty12345@cluster0.49hwdwu.mongodb.net/?retryWrites=true&w=majority';
+const db = 'mongodb+srv://roskichuk:qwerty12345@cluster0.nbpu5rm.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose
 .connect(db)
