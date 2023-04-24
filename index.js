@@ -19,6 +19,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/get-all-standart-mirrors',MirrorsStandartController.getAll);
+app.post('/create-standart-mirrors',MirrorsStandartController.create);
+app.patch('/update-goods',MirrorsStandartController.updateGoods)
+app.patch('/update-type',MirrorsStandartController.updateType)
 
 app.listen(process.env.PORT,() => {
     console.log('Server start', process.env.PORT);
