@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import * as MirrorsStandartController from './controller/MirrorsStandartController.js';
+import * as ShowerCabinController from './controller/showerCabinController.js';
 
 dotenv.config();
 const app = express();
@@ -22,6 +23,9 @@ app.get('/get-all-standart-mirrors',MirrorsStandartController.getAll);
 app.post('/create-standart-mirrors',MirrorsStandartController.create);
 app.patch('/update-goods',MirrorsStandartController.updateGoods)
 app.patch('/update-type',MirrorsStandartController.updateType)
+
+app.post('/create-shower',ShowerCabinController.create);
+app.get('/get-all-shower',ShowerCabinController.getAll);
 
 app.listen(process.env.PORT,() => {
     console.log('Server start', process.env.PORT);
