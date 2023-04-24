@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
+import * as MirrorsStandartController from './controller/MirrorsStandartController.js';
 
 dotenv.config();
 const app = express();
@@ -17,6 +17,8 @@ mongoose
 
 app.use(cors());
 app.use(express.json());
+
+app.get('/get-all-standart-mirrors',MirrorsStandartController.getAll);
 
 app.listen(process.env.PORT,() => {
     console.log('Server start', process.env.PORT);
