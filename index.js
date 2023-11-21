@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import * as MirrorsStandartController from './controller/MirrorsStandartController.js';
-import * as ShowerCabinController from './controller/showerCabinController.js';
+import * as ShowerCabinController from './controller/ShowerCabinController.js';
 
 dotenv.config();
 const app = express();
